@@ -7,7 +7,8 @@ var miney = 200;
 var topx = 0;
 var topy = 0;
 
-
+ // this is version 3.. you can redo and use object orientated programming and use the pop function. Then you can replace the pics with 
+ 
 function setup()
 {
 	
@@ -24,7 +25,6 @@ function draw()
 {
   submarine(subx,suby)
   mines(200,200);
-
 }
 
 function torpedo(topx,topy)
@@ -100,7 +100,12 @@ function detonation() // this checks for the submarine hitting the depth charge 
 	{
 		clear();
 		background(0,0,255)
-		image(explosion, minex,miney)
+    subPic = loadImage("images/explosion.png") // this replaces, the mine and the submarine picture with the explosion picture
+    minePic = loadImage("images/explosion.png")
+    image(explosion, minex,miney)
+    image(subPic, minex,miney)
+    image(minePic, minex,miney)
+
 	}
 }
 
